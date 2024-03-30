@@ -2,4 +2,4 @@ from sklearn.datasets import load_iris
 
 data = load_iris()
 
-print(data["data"][0])
+print(data["data"][1])
