@@ -3,6 +3,9 @@ import time
 import requests
 import time
 import numpy as np
+import sys
+
+myToken = sys.argv[1]
 
 
 def post_message(token, channel, text):
@@ -18,8 +21,6 @@ def tickers_db(ticker):
     df = pyupbit.get_ohlcv(ticker, interval="day", count=210)
     return df
 
-
-myToken = "xoxb-4019297737527-4036330620788-OuSqeGVPvGEomCxlGlvHyoIh"
 
 try:
     coin_nm_lst = [
@@ -50,7 +51,7 @@ try:
         "WAVES",
         "EOS",
         "CVC",
-        "REP",
+        # "REP",
         "TRX",
         "SXP",
         "VET",
